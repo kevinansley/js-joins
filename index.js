@@ -37,11 +37,11 @@ export function leftJoin(left, right, on, yielding) {
  * @param {function} yielding function that defines how you want to represent the join of (left, right)
  */
 export function rightJoin(left, right, on, yielding) {
-  return right.map(x => {
-    let val = left.filter(y => on(x, y))
-      .map(y => yielding(x, y))
+  return right.map(y => {
+    let val = left.filter(x => on(x, y))
+      .map(x => yielding(x, y))
     if (val.length === 0)
-      return [yielding(x, {})]
+      return [yielding({}, y)]
     return val
   }).reduce((a, b) => a.concat(b), [])
 }

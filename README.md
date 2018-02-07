@@ -5,7 +5,7 @@ every join takes 4 parameters:
 1) a "left" data set (Object array)
 2) a "right" data set (Object array), 
 3) a join function, like: (left, right) => left.someKey === right.someKey
-4) a yielding function, which returns an 
+4) a yielding function, which defines how you want to return your data
 
 ## Examples
 Setup:

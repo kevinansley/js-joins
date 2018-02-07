@@ -3,12 +3,12 @@
  * @param {Object[]} left 
  * @param {Object[]} right 
  * @param {function} on joining function for (left, right)
- * @param {function} yeilding function that defines how you want to represent the join of (left, right)
+ * @param {function} yielding function that defines how you want to represent the join of (left, right)
  */
-export function innerJoin(left, right, on, yeilding) {
+export function innerJoin(left, right, on, yielding) {
   return left.map(x => (
     right.filter(y => on(x, y))
-      .map(y => yeilding(x, y))
+      .map(y => yielding(x, y))
   )).reduce((a, b) => a.concat(b), [])
 }
 
@@ -17,7 +17,7 @@ export function innerJoin(left, right, on, yeilding) {
  * @param {Object[]} left 
  * @param {Object[]} right 
  * @param {function} on joining function for (left, right)
- * @param {function} yeilding function that defines how you want to represent the join of (left, right)
+ * @param {function} yielding a function that defines how you want to represent the join of (left, right)
  */
 export function leftJoin(left, right, on, yielding) {
   return left.map(x => {
@@ -34,7 +34,7 @@ export function leftJoin(left, right, on, yielding) {
  * @param {Object[]} left 
  * @param {Object[]} right 
  * @param {function} on joining function for (left, right)
- * @param {function} yeilding function that defines how you want to represent the join of (left, right)
+ * @param {function} yielding function that defines how you want to represent the join of (left, right)
  */
 export function rightJoin(left, right, on, yielding) {
   return right.map(x => {

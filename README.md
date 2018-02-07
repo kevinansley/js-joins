@@ -8,7 +8,7 @@ every join takes 4 parameters:
 4) a yielding function, which returns an 
 
 ## Examples
-
+Setup:
 ```
 let users = [
   {id:1, name: "Kevin", roleId: 1}, 

@@ -9,7 +9,7 @@ every join takes 4 parameters:
 
 ## Examples
 Setup:
-```
+```javascript
 let users = [
   {id:1, name: "Kevin", roleId: 1}, 
   {id:2, name: "John", roleId: 2},
@@ -22,7 +22,7 @@ let roles = [
 ]
 ```
 Using ES6 with spread...
-```
+```javascript
 import {innerJoin, leftJoin, rightJoin} from 'js-joins'
 
 innerJoin(

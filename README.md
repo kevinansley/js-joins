@@ -66,5 +66,4 @@ rightJoin(
   ]
 */
 ```
-With these examples, we are using the spread operator.
-To work in your project doesn't support the spread operation, you can easily use ```(u,r) => Object.assign({}, u, {role: r.name})```
+Note: in these examples, the yielding function uses the spread operator. the yielding function can return any data you desire, but in most cases, you'll find spreading desirable. To work in your project doesn't support the spread operation, you can easily use ```(u,r) => Object.assign({}, u, {role: r.name})```

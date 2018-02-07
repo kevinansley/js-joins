@@ -67,4 +67,4 @@ rightJoin(
 */
 ```
 With these examples, we are using the spread operator.
-To work in your project doesn't support the spread operation, you can easily use ```(u,r) Object.assign({}, u, {role: r.name})```
+To work in your project doesn't support the spread operation, you can easily use ```(u,r) => Object.assign({}, u, {role: r.name})```
